@@ -1,0 +1,655 @@
+{
+ "briefId": "last-dumpling",
+ "recordedAt": "2026-10-11T03:12:56.816Z",
+ "model": "claude-sonnet-5-5",
+ "segments": [
+  {
+   "input": "New film from the director.\nBrief: Two old friends, Ren and Odile, argue over the last dumpling at a night market stall. Fast, funny back-and-forth dialogue, and the stall owner settles it by splitting the dumpling in two.\nTarget length: 20 s. Aspect ratio: 16:9. Clips at 720p. Budget: 160 credits.\nPlan it and run production. Stop where the decisions are the director's.",
+   "turns": [
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "setProject",
+       "input": {
+        "title": "Last Dumpling",
+        "logline": "Two old friends bicker over the last dumpling at a night market stall until the owner splits it in two.",
+        "look": {
+         "palette": [
+          "#1b1b2f",
+          "#f4a259",
+          "#d7263d",
+          "#f6e8c3"
+         ],
+         "style": "Warm cinematic night market, neon and lantern light, shallow depth of field",
+         "mood": "Playful, lively, affectionate"
+        }
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 28,
+      "cacheRead": 5172,
+      "cacheWrite": 755
+     },
+     "durationMs": 3435
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "upsertElements",
+       "input": {
+        "elements": [
+         {
+          "id": "ren",
+          "kind": "cast",
+          "name": "Ren",
+          "description": "Man in his 40s, short black hair, olive bomber jacket, quick expressive grin"
+         },
+         {
+          "id": "odile",
+          "kind": "cast",
+          "name": "Odile",
+          "description": "Woman in her 40s, curly auburn hair, mustard yellow raincoat, round glasses"
+         },
+         {
+          "id": "owner",
+          "kind": "cast",
+          "name": "Stall owner",
+          "description": "Older woman, grey hair under a white cap, red apron, steady amused look"
+         },
+         {
+          "id": "stall",
+          "kind": "location",
+          "name": "Night market dumpling stall",
+          "description": "Steamy street stall with wooden counter, paper lanterns, neon signs, crowd blurred behind"
+         },
+         {
+          "id": "dumpling",
+          "kind": "prop",
+          "name": "Last dumpling",
+          "description": "Single plump pleated steamed dumpling on a small white plate, bamboo steamer beside it"
+         }
+        ]
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 28,
+      "cacheRead": 5172,
+      "cacheWrite": 755
+     },
+     "durationMs": 2253
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "searchLibrary",
+       "input": {
+        "query": "night market stall",
+        "kind": "location"
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 28,
+      "cacheRead": 5172,
+      "cacheWrite": 755
+     },
+     "durationMs": 333
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "searchLibrary",
+       "input": {
+        "query": "dumpling",
+        "kind": "prop"
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 28,
+      "cacheRead": 5172,
+      "cacheWrite": 755
+     },
+     "durationMs": 221
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "attachLibraryAsset",
+       "input": {
+        "elementId": "stall",
+        "assetId": "LIB-04"
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 32,
+      "cacheRead": 5927,
+      "cacheWrite": 1348
+     },
+     "durationMs": 1447
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "writeScenes",
+       "input": {
+        "scenes": [
+         {
+          "n": 1,
+          "heading": "EXT. NIGHT MARKET STALL - NIGHT",
+          "action": "Ren and Odile lean on the counter. Both reach chopsticks toward the last dumpling on the plate. Chopsticks clash above it.",
+          "durationSec": 5,
+          "cameraMove": "push-in",
+          "elementIds": [
+           "ren",
+           "odile",
+           "dumpling",
+           "stall"
+          ],
+          "dialogue": [
+           {
+            "speaker": "ren",
+            "line": "I saw it first."
+           },
+           {
+            "speaker": "odile",
+            "line": "You saw it second. I ordered it."
+           },
+           {
+            "speaker": "ren",
+            "line": "I paid!"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "heading": "EXT. NIGHT MARKET STALL - NIGHT",
+          "action": "Odile pulls the plate toward herself. Ren pulls it back. They point chopsticks at each other, mouths moving fast.",
+          "durationSec": 6,
+          "cameraMove": "pan-right",
+          "elementIds": [
+           "ren",
+           "odile",
+           "dumpling",
+           "stall"
+          ],
+          "dialogue": [
+           {
+            "speaker": "odile",
+            "line": "You ate the last one at my birthday!"
+           },
+           {
+            "speaker": "ren",
+            "line": "That was ten years ago!"
+           },
+           {
+            "speaker": "odile",
+            "line": "And I still remember the taste of betrayal."
+           }
+          ]
+         },
+         {
+          "n": 3,
+          "heading": "EXT. NIGHT MARKET STALL - NIGHT",
+          "action": "The stall owner reaches in with a small knife and cleanly cuts the dumpling in half. Steam rises. Ren and Odile freeze, staring.",
+          "durationSec": 4,
+          "cameraMove": "static",
+          "elementIds": [
+           "owner",
+           "ren",
+           "odile",
+           "dumpling",
+           "stall"
+          ],
+          "dialogue": [
+           {
+            "speaker": "owner",
+            "line": "Enough. Half each."
+           }
+          ]
+         },
+         {
+          "n": 4,
+          "heading": "EXT. NIGHT MARKET STALL - NIGHT",
+          "action": "Ren and Odile each pick up a half with chopsticks and clink them together like glasses. They eat, grinning. The owner smiles behind the counter.",
+          "durationSec": 5,
+          "cameraMove": "pull-out",
+          "elementIds": [
+           "ren",
+           "odile",
+           "owner",
+           "dumpling",
+           "stall"
+          ],
+          "dialogue": [
+           {
+            "speaker": "ren",
+            "line": "Cheers, you thief."
+           },
+           {
+            "speaker": "odile",
+            "line": "Cheers, you villain."
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 32,
+      "cacheRead": 5927,
+      "cacheWrite": 1348
+     },
+     "durationMs": 4796
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "writeScenes",
+       "input": {
+        "scenes": [
+         {
+          "n": 1,
+          "heading": "EXT. NIGHT MARKET STALL - NIGHT",
+          "action": "Ren and Odile lean on the counter. Both reach chopsticks toward the last dumpling on the plate. Chopsticks clash above it.",
+          "durationSec": 5,
+          "cameraMove": "push-in",
+          "elementIds": [
+           "ren",
+           "odile",
+           "dumpling",
+           "stall"
+          ],
+          "dialogue": [
+           {
+            "speaker": "ren",
+            "line": "I saw it first."
+           },
+           {
+            "speaker": "odile",
+            "line": "I ordered it."
+           },
+           {
+            "speaker": "ren",
+            "line": "I paid!"
+           }
+          ]
+         },
+         {
+          "n": 2,
+          "heading": "EXT. NIGHT MARKET STALL - NIGHT",
+          "action": "Odile pulls the plate toward herself. Ren pulls it back. They point chopsticks at each other, mouths moving fast.",
+          "durationSec": 6,
+          "cameraMove": "pan-right",
+          "elementIds": [
+           "ren",
+           "odile",
+           "dumpling",
+           "stall"
+          ],
+          "dialogue": [
+           {
+            "speaker": "odile",
+            "line": "You ate my birthday dumpling!"
+           },
+           {
+            "speaker": "ren",
+            "line": "Ten years ago!"
+           },
+           {
+            "speaker": "odile",
+            "line": "I remember betrayal."
+           }
+          ]
+         },
+         {
+          "n": 3,
+          "heading": "EXT. NIGHT MARKET STALL - NIGHT",
+          "action": "The stall owner reaches in with a small knife and cleanly cuts the dumpling in half. Steam rises. Ren and Odile freeze, staring.",
+          "durationSec": 4,
+          "cameraMove": "static",
+          "elementIds": [
+           "owner",
+           "ren",
+           "odile",
+           "dumpling",
+           "stall"
+          ],
+          "dialogue": [
+           {
+            "speaker": "owner",
+            "line": "Enough. Half each."
+           }
+          ]
+         },
+         {
+          "n": 4,
+          "heading": "EXT. NIGHT MARKET STALL - NIGHT",
+          "action": "Ren and Odile each pick up a half with chopsticks and clink them together like glasses. They eat, grinning. The owner smiles behind the counter.",
+          "durationSec": 5,
+          "cameraMove": "pull-out",
+          "elementIds": [
+           "ren",
+           "odile",
+           "owner",
+           "dumpling",
+           "stall"
+          ],
+          "dialogue": [
+           {
+            "speaker": "ren",
+            "line": "Cheers, you thief."
+           },
+           {
+            "speaker": "odile",
+            "line": "Cheers, you villain."
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 8,
+      "cacheRead": 7275,
+      "cacheWrite": 1370
+     },
+     "durationMs": 5361
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "estimateCost",
+       "input": {
+        "imageModel": "sim-image-pro",
+        "videoModel": "sim-video-pro",
+        "resolution": "720p",
+        "references": [
+         "ren",
+         "odile",
+         "owner",
+         "dumpling"
+        ],
+        "frames": [
+         1,
+         2,
+         3,
+         4
+        ],
+        "clips": [
+         1,
+         2,
+         3,
+         4
+        ]
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 8,
+      "cacheRead": 7275,
+      "cacheWrite": 1370
+     },
+     "durationMs": 810
+    },
+    {
+     "text": "Fits (123 of 160).",
+     "toolCalls": [
+      {
+       "name": "renderReferences",
+       "input": {
+        "elementIds": [
+         "ren",
+         "odile",
+         "owner",
+         "dumpling"
+        ],
+        "model": "sim-image-pro"
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 42,
+      "cacheRead": 8645,
+      "cacheWrite": 2150
+     },
+     "durationMs": 1455
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "waitForJobs",
+       "input": {
+        "jobIds": [
+         "J1",
+         "J2",
+         "J3",
+         "J4"
+        ]
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 32,
+      "cacheRead": 10795,
+      "cacheWrite": 391
+     },
+     "durationMs": 1193
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "askDirector",
+       "input": {
+        "kind": "look",
+        "message": "Looks for Ren, Odile, the stall owner and the dumpling are ready. The stall uses the library look. Please review.",
+        "elementIds": [
+         "ren",
+         "odile",
+         "owner",
+         "dumpling"
+        ]
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 24,
+      "cacheRead": 11186,
+      "cacheWrite": 335
+     },
+     "durationMs": 1645
+    },
+    {
+     "text": "The four looks (Ren, Odile, the stall owner and the dumpling) are ready for your review. The stall uses the library look. The plan is four scenes totalling 20 s, and the full run is estimated at 123 of the 160 credits. I'll render frames and clips once you approve the looks.",
+     "toolCalls": [],
+     "usage": {
+      "input": 2,
+      "output": 96,
+      "cacheRead": 11521,
+      "cacheWrite": 231
+     },
+     "durationMs": 1580
+    }
+   ],
+   "result": {
+    "durationMs": 24020,
+    "totalUsage": {
+     "input": 1320,
+     "output": 3397,
+     "cacheRead": 60521,
+     "cacheWrite": 6580
+    },
+    "costUsd": 0.0647622,
+    "turns": 12,
+    "isError": false,
+    "errors": []
+   }
+  },
+  {
+   "input": "Director answered look card D5. Approved: ren (take 1), odile (take 1), owner (take 1), dumpling (take 1). All looks on the card are approved.",
+   "turns": [
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "renderFrames",
+       "input": {
+        "scenes": [
+         1,
+         2,
+         3,
+         4
+        ],
+        "model": "sim-image-pro"
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 24,
+      "cacheRead": 11752,
+      "cacheWrite": 176
+     },
+     "durationMs": 1645
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "waitForJobs",
+       "input": {
+        "jobIds": [
+         "J6",
+         "J7",
+         "J8",
+         "J9"
+        ]
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 32,
+      "cacheRead": 11928,
+      "cacheWrite": 482
+     },
+     "durationMs": 1202
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "renderClips",
+       "input": {
+        "scenes": [
+         1,
+         2,
+         3,
+         4
+        ],
+        "model": "sim-video-pro",
+        "resolution": "720p"
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 24,
+      "cacheRead": 12410,
+      "cacheWrite": 300
+     },
+     "durationMs": 1393
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "waitForJobs",
+       "input": {
+        "jobIds": [
+         "J10",
+         "J11",
+         "J12",
+         "J13"
+        ]
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 27,
+      "cacheRead": 12710,
+      "cacheWrite": 431
+     },
+     "durationMs": 1276
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "assembleCut",
+       "input": {}
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 24,
+      "cacheRead": 13141,
+      "cacheWrite": 300
+     },
+     "durationMs": 1009
+    },
+    {
+     "text": "\"Last Dumpling\" is assembled: four clips, 20 s, 720p, and all export checks passed. It used 123 of the 160 credits.",
+     "toolCalls": [],
+     "usage": {
+      "input": 2,
+      "output": 50,
+      "cacheRead": 13441,
+      "cacheWrite": 357
+     },
+     "durationMs": 1214
+    }
+   ],
+   "result": {
+    "durationMs": 8347,
+    "totalUsage": {
+     "input": 1332,
+     "output": 3843,
+     "cacheRead": 135903,
+     "cacheWrite": 8626
+    },
+    "costUsd": 0.08496840000000001,
+    "turns": 6,
+    "isError": false,
+    "errors": []
+   }
+  }
+ ]
+}

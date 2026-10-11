@@ -1,0 +1,434 @@
+{
+  "ranAt": "2026-10-11T03:14:23.096Z",
+  "provider": "live",
+  "model": "claude-sonnet-5-5",
+  "meanScore": 1,
+  "results": [
+    {
+      "briefId": "tea-flask",
+      "title": "Tea flask spec ad",
+      "plan": [
+        {
+          "id": "length",
+          "label": "Total length within 10% of the target",
+          "status": "fixed"
+        },
+        {
+          "id": "headings",
+          "label": "Headings read INT./EXT. PLACE - TIME",
+          "status": "pass"
+        },
+        {
+          "id": "visible-action",
+          "label": "Action shows only what the camera sees",
+          "status": "pass"
+        },
+        {
+          "id": "dialogue-fit",
+          "label": "Dialogue fits the shot (max 2.5 words/s)",
+          "status": "pass"
+        },
+        {
+          "id": "references",
+          "label": "Every speaker and linked element exists",
+          "status": "pass"
+        }
+      ],
+      "trace": [
+        {
+          "id": "estimate-first",
+          "label": "Estimate before the first render",
+          "pass": true,
+          "note": "call 9 before call 13"
+        },
+        {
+          "id": "ask-after-refusal",
+          "label": "askDirector right after a refusal",
+          "pass": true,
+          "note": "no refusals"
+        },
+        {
+          "id": "no-early-frames",
+          "label": "No frame requested before look approval",
+          "pass": true,
+          "note": "none"
+        },
+        {
+          "id": "ends-with-cut-or-card",
+          "label": "Run ends with a cut or an open card",
+          "pass": true,
+          "note": "cut assembled"
+        }
+      ],
+      "passed": 9,
+      "total": 9,
+      "score": 1,
+      "creditsSpent": 117,
+      "budget": 150,
+      "toolCalls": 20,
+      "turns": 23,
+      "tokensIn": 187670,
+      "tokensOut": 3955,
+      "costUsdEstimate": 0.0961,
+      "durationMs": 38091,
+      "provider": "live",
+      "model": "claude-sonnet-5-5",
+      "error": null
+    },
+    {
+      "briefId": "last-dumpling",
+      "title": "The last dumpling",
+      "plan": [
+        {
+          "id": "length",
+          "label": "Total length within 10% of the target",
+          "status": "fixed"
+        },
+        {
+          "id": "headings",
+          "label": "Headings read INT./EXT. PLACE - TIME",
+          "status": "pass"
+        },
+        {
+          "id": "visible-action",
+          "label": "Action shows only what the camera sees",
+          "status": "pass"
+        },
+        {
+          "id": "dialogue-fit",
+          "label": "Dialogue fits the shot (max 2.5 words/s)",
+          "status": "fixed"
+        },
+        {
+          "id": "references",
+          "label": "Every speaker and linked element exists",
+          "status": "pass"
+        }
+      ],
+      "trace": [
+        {
+          "id": "estimate-first",
+          "label": "Estimate before the first render",
+          "pass": true,
+          "note": "call 8 before call 9"
+        },
+        {
+          "id": "ask-after-refusal",
+          "label": "askDirector right after a refusal",
+          "pass": true,
+          "note": "no refusals"
+        },
+        {
+          "id": "no-early-frames",
+          "label": "No frame requested before look approval",
+          "pass": true,
+          "note": "none"
+        },
+        {
+          "id": "ends-with-cut-or-card",
+          "label": "Run ends with a cut or an open card",
+          "pass": true,
+          "note": "cut assembled"
+        }
+      ],
+      "passed": 9,
+      "total": 9,
+      "score": 1,
+      "creditsSpent": 123,
+      "budget": 160,
+      "toolCalls": 16,
+      "turns": 18,
+      "tokensIn": 145861,
+      "tokensOut": 3843,
+      "costUsdEstimate": 0.085,
+      "durationMs": 33841,
+      "provider": "live",
+      "model": "claude-sonnet-5-5",
+      "error": null
+    },
+    {
+      "briefId": "mug-loop",
+      "title": "Ceramic mug loop",
+      "plan": [
+        {
+          "id": "length",
+          "label": "Total length within 10% of the target",
+          "status": "fixed"
+        },
+        {
+          "id": "headings",
+          "label": "Headings read INT./EXT. PLACE - TIME",
+          "status": "pass"
+        },
+        {
+          "id": "visible-action",
+          "label": "Action shows only what the camera sees",
+          "status": "pass"
+        },
+        {
+          "id": "dialogue-fit",
+          "label": "Dialogue fits the shot (max 2.5 words/s)",
+          "status": "pass"
+        },
+        {
+          "id": "references",
+          "label": "Every speaker and linked element exists",
+          "status": "pass"
+        }
+      ],
+      "trace": [
+        {
+          "id": "estimate-first",
+          "label": "Estimate before the first render",
+          "pass": true,
+          "note": "call 7 before call 8"
+        },
+        {
+          "id": "ask-after-refusal",
+          "label": "askDirector right after a refusal",
+          "pass": true,
+          "note": "no refusals"
+        },
+        {
+          "id": "no-early-frames",
+          "label": "No frame requested before look approval",
+          "pass": true,
+          "note": "none"
+        },
+        {
+          "id": "ends-with-cut-or-card",
+          "label": "Run ends with a cut or an open card",
+          "pass": true,
+          "note": "cut assembled"
+        }
+      ],
+      "passed": 9,
+      "total": 9,
+      "score": 1,
+      "creditsSpent": 74,
+      "budget": 100,
+      "toolCalls": 15,
+      "turns": 17,
+      "tokensIn": 115735,
+      "tokensOut": 2334,
+      "costUsdEstimate": 0.0579,
+      "durationMs": 23858,
+      "provider": "live",
+      "model": "claude-sonnet-5-5",
+      "error": null
+    },
+    {
+      "briefId": "cliff-kite",
+      "title": "Kite on the cliff",
+      "plan": [
+        {
+          "id": "length",
+          "label": "Total length within 10% of the target",
+          "status": "fixed"
+        },
+        {
+          "id": "headings",
+          "label": "Headings read INT./EXT. PLACE - TIME",
+          "status": "pass"
+        },
+        {
+          "id": "visible-action",
+          "label": "Action shows only what the camera sees",
+          "status": "pass"
+        },
+        {
+          "id": "dialogue-fit",
+          "label": "Dialogue fits the shot (max 2.5 words/s)",
+          "status": "pass"
+        },
+        {
+          "id": "references",
+          "label": "Every speaker and linked element exists",
+          "status": "pass"
+        }
+      ],
+      "trace": [
+        {
+          "id": "estimate-first",
+          "label": "Estimate before the first render",
+          "pass": true,
+          "note": "call 7 before call 8"
+        },
+        {
+          "id": "ask-after-refusal",
+          "label": "askDirector right after a refusal",
+          "pass": true,
+          "note": "no refusals"
+        },
+        {
+          "id": "no-early-frames",
+          "label": "No frame requested before look approval",
+          "pass": true,
+          "note": "none"
+        },
+        {
+          "id": "ends-with-cut-or-card",
+          "label": "Run ends with a cut or an open card",
+          "pass": true,
+          "note": "cut assembled"
+        }
+      ],
+      "passed": 9,
+      "total": 9,
+      "score": 1,
+      "creditsSpent": 156,
+      "budget": 220,
+      "toolCalls": 15,
+      "turns": 17,
+      "tokensIn": 128472,
+      "tokensOut": 2626,
+      "costUsdEstimate": 0.0661,
+      "durationMs": 28006,
+      "provider": "live",
+      "model": "claude-sonnet-5-5",
+      "error": null
+    },
+    {
+      "briefId": "closing-time",
+      "title": "Closing time",
+      "plan": [
+        {
+          "id": "length",
+          "label": "Total length within 10% of the target",
+          "status": "fixed"
+        },
+        {
+          "id": "headings",
+          "label": "Headings read INT./EXT. PLACE - TIME",
+          "status": "pass"
+        },
+        {
+          "id": "visible-action",
+          "label": "Action shows only what the camera sees",
+          "status": "pass"
+        },
+        {
+          "id": "dialogue-fit",
+          "label": "Dialogue fits the shot (max 2.5 words/s)",
+          "status": "pass"
+        },
+        {
+          "id": "references",
+          "label": "Every speaker and linked element exists",
+          "status": "pass"
+        }
+      ],
+      "trace": [
+        {
+          "id": "estimate-first",
+          "label": "Estimate before the first render",
+          "pass": true,
+          "note": "call 7 before call 8"
+        },
+        {
+          "id": "ask-after-refusal",
+          "label": "askDirector right after a refusal",
+          "pass": true,
+          "note": "no refusals"
+        },
+        {
+          "id": "no-early-frames",
+          "label": "No frame requested before look approval",
+          "pass": true,
+          "note": "none"
+        },
+        {
+          "id": "ends-with-cut-or-card",
+          "label": "Run ends with a cut or an open card",
+          "pass": true,
+          "note": "cut assembled"
+        }
+      ],
+      "passed": 9,
+      "total": 9,
+      "score": 1,
+      "creditsSpent": 117,
+      "budget": 150,
+      "toolCalls": 15,
+      "turns": 17,
+      "tokensIn": 120409,
+      "tokensOut": 2751,
+      "costUsdEstimate": 0.0643,
+      "durationMs": 28573,
+      "provider": "live",
+      "model": "claude-sonnet-5-5",
+      "error": null
+    },
+    {
+      "briefId": "tiny-chase",
+      "title": "Rooftop chase on 20 credits",
+      "plan": [
+        {
+          "id": "length",
+          "label": "Total length within 10% of the target",
+          "status": "fixed"
+        },
+        {
+          "id": "headings",
+          "label": "Headings read INT./EXT. PLACE - TIME",
+          "status": "pass"
+        },
+        {
+          "id": "visible-action",
+          "label": "Action shows only what the camera sees",
+          "status": "pass"
+        },
+        {
+          "id": "dialogue-fit",
+          "label": "Dialogue fits the shot (max 2.5 words/s)",
+          "status": "pass"
+        },
+        {
+          "id": "references",
+          "label": "Every speaker and linked element exists",
+          "status": "pass"
+        }
+      ],
+      "trace": [
+        {
+          "id": "estimate-first",
+          "label": "Estimate before the first render",
+          "pass": true,
+          "note": "no renders"
+        },
+        {
+          "id": "ask-after-refusal",
+          "label": "askDirector right after a refusal",
+          "pass": true,
+          "note": "no refusals"
+        },
+        {
+          "id": "no-early-frames",
+          "label": "No frame requested before look approval",
+          "pass": true,
+          "note": "none"
+        },
+        {
+          "id": "ends-with-cut-or-card",
+          "label": "Run ends with a cut or an open card",
+          "pass": true,
+          "note": "open budget card"
+        }
+      ],
+      "passed": 9,
+      "total": 9,
+      "score": 1,
+      "creditsSpent": 0,
+      "budget": 20,
+      "toolCalls": 7,
+      "turns": 8,
+      "tokensIn": 32273,
+      "tokensOut": 2049,
+      "costUsdEstimate": 0.0369,
+      "durationMs": 17145,
+      "provider": "live",
+      "model": "claude-sonnet-5-5",
+      "error": null
+    }
+  ]
+}
