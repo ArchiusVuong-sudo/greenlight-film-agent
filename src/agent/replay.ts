@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import type { AgentProvider, AgentRunParams, Fixture } from "./provider";
 
-export const FIXTURE_DIR = resolve(process.env.FIXTURE_DIR || "fixtures");
+export const FIXTURE_DIR = resolve(/*turbopackIgnore: true*/ process.env.FIXTURE_DIR || "fixtures");
 export const DEFAULT_FIXTURE = "tea-flask";
 
 export function fixturePath(briefId: string): string {

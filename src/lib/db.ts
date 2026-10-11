@@ -197,7 +197,7 @@ export const DEMO_GRANT = 1000;
 let shared: DB | null = null;
 
 export function dbPath(): string {
-  return resolve(process.env.GREENLIGHT_DB || "data/greenlight.db");
+  return resolve(/*turbopackIgnore: true*/ process.env.GREENLIGHT_DB || "data/greenlight.db");
 }
 
 /** Opens (and migrates) a SQLite file. WAL plus busy_timeout lets the web app and the worker share it. */
