@@ -85,7 +85,7 @@ function ElementCard({ state, el }: { state: FilmState; el: ElementRow }) {
           <Icon className="size-3.5 shrink-0 text-ink-400" />
           <p className="truncate text-sm font-medium">{el.name}</p>
         </div>
-        <p className="mt-0.5 line-clamp-2 min-h-[30px] text-[11px] leading-snug text-ink-400">{el.description}</p>
+        <p className="mt-0.5 line-clamp-1 text-[11px] leading-snug text-ink-400" title={el.description}>{el.description}</p>
         <div className="mt-2">
           <LookBadge state={state} elementId={el.id} />
         </div>
@@ -152,7 +152,7 @@ function SceneCard({ state, n }: { state: FilmState; n: number }) {
           </p>
           <span className="shrink-0 text-[11px] text-ink-400">{scene.durationSec} s</span>
         </div>
-        <p className="line-clamp-2 text-[11px] leading-snug text-ink-300">{scene.action}</p>
+        <p className="line-clamp-1 text-[11px] leading-snug text-ink-300" title={scene.action}>{scene.action}</p>
         <JobLine label="Frame" job={frame} />
         <JobLine label="Clip" job={clip} />
       </div>
