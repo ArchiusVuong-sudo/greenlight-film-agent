@@ -17,7 +17,7 @@ Full video: https://github.com/ArchiusVuong-sudo/greenlight-film-agent/releases/
 ## Architecture
 
 ```mermaid
-flowchart LR
+flowchart TB
   UI["Next.js UI: New film, Script, Board, Editor, Evals, Assistant panel, Ledger"] --> API["API routes"]
   API --> DB[("SQLite: films, scenes, elements, looks, jobs, ledger, quotes, cards, activity")]
   subgraph Worker["Worker process"]
