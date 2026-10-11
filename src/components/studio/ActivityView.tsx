@@ -38,7 +38,7 @@ export function ActivityView({ state }: { state: FilmState }) {
         {groups.map((g, gi) => {
           const run = runs.find((r) => r.id === g.id);
           const collapsed = open[g.id] === false;
-          const credits = g.rows.filter((r) => r.kind === "job" && r.status === "ok").reduce((a, r) => a + (r.credits ?? 0), 0);
+          const credits = state.activity.filter((r) => groupOf(r) === g.id && r.kind === "job" && r.status === "ok").reduce((a, r) => a + (r.credits ?? 0), 0);
           return (
             <div key={g.id} className="mb-3 overflow-hidden rounded-xl border border-ink-700 bg-ink-900">
               <button onClick={() => setOpen((s) => ({ ...s, [g.id]: collapsed }))} className="flex w-full items-start gap-2 px-3 py-2.5 text-left hover:bg-ink-850">

@@ -105,9 +105,9 @@ export function LookBadge({ state, elementId }: { state: FilmState; elementId: s
   switch (look.status) {
     case "reused":
       return (
-        <Badge tone="violet" className="whitespace-normal leading-snug">
-          <Library className="size-3 shrink-0" /> Reused from library, 0 cr
-        </Badge>
+        <span className="inline-flex items-start gap-1 rounded-lg bg-violet-500/12 px-2 py-0.5 text-[11px] font-medium leading-snug text-violet-300 ring-1 ring-inset ring-violet-500/30">
+          <Library className="mt-0.5 size-3 shrink-0" /> Reused from library, 0 cr
+        </span>
       );
     case "approved":
       return <Badge tone="go">Approved, take {look.version}</Badge>;

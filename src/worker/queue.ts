@@ -86,7 +86,7 @@ export class RenderQueue {
     const attempt = job.attempts + 1;
     const t0 = Date.now();
     this.db.prepare("UPDATE jobs SET status = 'running', attempts = ?, progress = 0, started_at = COALESCE(started_at, ?) WHERE film_id = ? AND id = ?").run(attempt, t0, filmId, job.id);
-    logActivity(this.db, { filmId, kind: "job", name: job.id, status: "info", summary: `${cap(describeJob(job.kind, job.target))} started (attempt ${attempt}, key ${job.idemKey})`, detail: { idemKey: job.idemKey, attempt } });
+    logActivity(this.db, { filmId, runId: job.runId, kind: "job", name: job.id, status: "info", summary: `${cap(describeJob(job.kind, job.target))} started (attempt ${attempt}, key ${job.idemKey})`, detail: { idemKey: job.idemKey, attempt } });
 
     const total = (1000 + this.random() * 2000) * this.scale;
     const steps = 6;
@@ -108,14 +108,14 @@ export class RenderQueue {
         }
       });
       tx();
-      logActivity(this.db, { filmId, kind: "job", name: job.id, status: "ok", durationMs: Date.now() - t0, credits: job.price, summary: `${cap(describeJob(job.kind, job.target))} done${attempt > 1 ? ` on attempt ${attempt}` : ""}, charged ${job.price} cr` });
+      logActivity(this.db, { filmId, runId: job.runId, kind: "job", name: job.id, status: "ok", durationMs: Date.now() - t0, credits: job.price, summary: `${cap(describeJob(job.kind, job.target))} done${attempt > 1 ? ` on attempt ${attempt}` : ""}, charged ${job.price} cr` });
     } catch (e) {
       const message = e instanceof Error ? e.message : String(e);
       const errors = [...job.errors, { attempt, message, at: Date.now() }];
       if (attempt < MAX_ATTEMPTS) {
         const backoff = 500 * 2 ** (attempt - 1) * this.scale;
         this.db.prepare("UPDATE jobs SET status = 'retrying', errors = ?, progress = 0, next_attempt_at = ? WHERE film_id = ? AND id = ?").run(JSON.stringify(errors), Date.now() + backoff, filmId, job.id);
-        logActivity(this.db, { filmId, kind: "job", name: job.id, status: "error", durationMs: Date.now() - t0, summary: `Attempt ${attempt} failed: ${message}. Retrying on the same key ${job.idemKey}` });
+        logActivity(this.db, { filmId, runId: job.runId, kind: "job", name: job.id, status: "error", durationMs: Date.now() - t0, summary: `Attempt ${attempt} failed: ${message}. Retrying on the same key ${job.idemKey}` });
       } else {
         const tx = this.db.transaction(() => {
           this.db.prepare("UPDATE jobs SET status = 'failed', errors = ?, finished_at = ? WHERE film_id = ? AND id = ?").run(JSON.stringify(errors), Date.now(), filmId, job.id);
@@ -123,7 +123,7 @@ export class RenderQueue {
           if (job.kind === "reference") this.db.prepare("UPDATE looks SET status = 'failed' WHERE film_id = ? AND job_id = ?").run(filmId, job.id);
         });
         tx();
-        logActivity(this.db, { filmId, kind: "job", name: job.id, status: "error", durationMs: Date.now() - t0, summary: `Failed after ${attempt} attempts: ${message}. Hold released` });
+        logActivity(this.db, { filmId, runId: job.runId, kind: "job", name: job.id, status: "error", durationMs: Date.now() - t0, summary: `Failed after ${attempt} attempts: ${message}. Hold released` });
       }
     }
   }

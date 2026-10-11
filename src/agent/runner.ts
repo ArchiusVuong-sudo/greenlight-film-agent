@@ -146,6 +146,13 @@ export async function executeRun(db: DB, runId: string, opts: RunOptions): Promi
         tools,
         model: opts.model,
         maxTurns: opts.maxTurns ?? 80,
+        waitIfPaused: async () => {
+          while (true) {
+            const r = getRun(db, runId);
+            if (!r || !r.paused || r.status === "stopped") return;
+            await sleep(pollMs);
+          }
+        },
         hooks: {
           onSession: ({ sessionId, model }) => updateRun(db, runId, { session_id: sessionId, model }),
           onTurn: (t: TurnRecord) => {

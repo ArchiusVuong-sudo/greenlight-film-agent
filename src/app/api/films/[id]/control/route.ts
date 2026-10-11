@@ -26,9 +26,17 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
     if (b.action === "pause") {
       if (!setPaused(db, id, true)) return Response.json({ error: "No active run to pause" }, { status: 409 });
     } else if (b.action === "continue") {
-      deliverInput(db, id, "Continue.", "continue", mode);
+      const run = activeRun(db, id);
+      // Paused mid-turn: lifting the pause is enough. After the turn ended, Continue is a message.
+      if (run?.paused && run.status === "running") setPaused(db, id, false);
+      else deliverInput(db, id, "Continue.", "continue", mode);
     } else if (b.action === "message") {
-      deliverInput(db, id, `Director: ${b.text}`, "instruction", mode);
+      if (mode === "replay") {
+        logActivity(db, { filmId: id, runId: activeRun(db, id)?.id ?? null, kind: "director", name: "instruction", status: "info", summary: b.text });
+        logActivity(db, { filmId: id, runId: activeRun(db, id)?.id ?? null, kind: "system", name: "server card", status: "info", summary: "Replay mode plays a recorded run, so typed instructions are logged but do not change it. Run live to steer the assistant." });
+      } else {
+        deliverInput(db, id, `Director: ${b.text}`, "instruction", mode);
+      }
     } else {
       const run = activeRun(db, id);
       if (run) {

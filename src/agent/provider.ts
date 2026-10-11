@@ -47,6 +47,8 @@ export interface AgentRunParams {
   model?: string;
   maxTurns: number;
   hooks: AgentHooks;
+  /** Resolves once the director is not pausing the run (replay waits here between turns). */
+  waitIfPaused?: () => Promise<void>;
 }
 
 export interface AgentProvider {

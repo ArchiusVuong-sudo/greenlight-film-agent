@@ -48,10 +48,12 @@ export class ReplayProvider implements AgentProvider {
       }
       const t0 = Date.now();
       for (const turn of seg.turns) {
+        await p.waitIfPaused?.();
         await wait(Math.min(turn.durationMs, 1200) * this.speed);
         p.hooks.onTurn(turn);
         for (const call of turn.toolCalls) {
           const t = tools.get(call.name);
+          await p.waitIfPaused?.();
           if (t) await t.call(call.input);
         }
       }

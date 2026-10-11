@@ -271,6 +271,7 @@ interface JobDbRow {
   params: string;
   asset_id: string | null;
   quote_id: string | null;
+  run_id: string | null;
   created_at: number;
   started_at: number | null;
   finished_at: number | null;
@@ -294,6 +295,7 @@ export function toJob(r: JobDbRow): JobRow {
     params: json(r.params, {}),
     assetId: r.asset_id,
     quoteId: r.quote_id,
+    runId: r.run_id,
     createdAt: r.created_at,
     startedAt: r.started_at,
     finishedAt: r.finished_at,
@@ -751,7 +753,8 @@ export function answerDecision(db: DB, filmId: string, decisionId: string, answe
       if (!opt) throw new StudioError(`Option ${answer.optionId} is not on card ${d.id}`);
       const note = answer.note?.trim() ? ` Note from the director: "${answer.note.trim()}".` : "";
       if (opt.id === "approve-quote" && d.payload.quoteId) {
-        const res = approveQuote(db, filmId, d.payload.quoteId, null);
+        const owner = db.prepare("SELECT run_id FROM decisions WHERE film_id = ? AND id = ?").get(filmId, d.id) as { run_id: string | null } | undefined;
+        const res = approveQuote(db, filmId, d.payload.quoteId, owner?.run_id ?? null);
         message = `Director approved quote ${d.payload.quoteId} (${res.total} cr). Queued exactly the quoted renders: ${res.jobs.map((j) => j.jobId).join(", ") || "none new"}. Wait for them, then carry on.${note}`;
       } else {
         if (d.payload.quoteId) declineQuote(db, filmId, d.payload.quoteId);

@@ -233,6 +233,7 @@ function Animatic({ state, cut }: { state: FilmState; cut: CutItem[] }) {
               style={{ transform: moveTransform(scene?.cameraMove ?? "static", len ? local / len : 0) }}
             />
           )}
+          <span className="absolute left-2 top-2 rounded bg-black/60 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white/90">Simulated render</span>
           {line && (
             <div className="absolute inset-x-3 bottom-8 text-center">
               <span className="rounded bg-black/70 px-2 py-1 text-[12px] leading-relaxed text-white">

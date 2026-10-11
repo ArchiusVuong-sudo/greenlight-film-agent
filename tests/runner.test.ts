@@ -134,4 +134,17 @@ describe("runner", () => {
     expect(getRun(db, run.id)?.provider).toBe("replay");
     expect(listActivity(db, filmId).some((a) => a.kind === "tool" && a.name === "getStatus")).toBe(true);
   });
+
+  it("replay waits at a turn boundary while paused and goes on when the pause is lifted", async () => {
+    const db = freshDb();
+    const filmId = filmWithPlan(db);
+    const run = createRun(db, filmId, "replay");
+    db.prepare("UPDATE runs SET paused = 1 WHERE id = ?").run(run.id);
+    const done = executeRun(db, run.id, { provider: new ReplayProvider(fixture([[turn("getStatus", {})]]), 0), director: () => null, pollMs: 5 });
+    await new Promise((r) => setTimeout(r, 60));
+    expect(listActivity(db, filmId).some((a) => a.kind === "tool")).toBe(false);
+    db.prepare("UPDATE runs SET paused = 0 WHERE id = ?").run(run.id);
+    await done;
+    expect(listActivity(db, filmId).filter((a) => a.kind === "tool").map((a) => a.status)).toEqual(["ok"]);
+  });
 });

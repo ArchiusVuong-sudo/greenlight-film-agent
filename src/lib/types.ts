@@ -118,6 +118,7 @@ export interface JobRow {
   params: Record<string, unknown>;
   assetId: string | null;
   quoteId: string | null;
+  runId: string | null;
   createdAt: number;
   startedAt: number | null;
   finishedAt: number | null;
