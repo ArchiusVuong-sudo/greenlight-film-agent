@@ -1,0 +1,46 @@
+{
+  "name": "greenlight-film-agent",
+  "version": "1.0.0",
+  "description": "A film assistant you hand a brief and a credit budget: it plans scenes through tool calls, prices simulated renders, stops for approvals and assembles the cut.",
+  "scripts": {
+    "build": "next build",
+    "start": "node scripts/start.mjs",
+    "worker": "tsx src/worker/index.ts",
+    "dev:web": "next dev -p 4105 -H 127.0.0.1",
+    "test": "vitest run",
+    "test:live": "LIVE=1 vitest run tests/live.smoke.test.ts",
+    "typecheck": "tsc --noEmit -p .",
+    "eval": "tsx scripts/eval.ts",
+    "record": "tsx scripts/record-fixtures.ts",
+    "reset": "tsx scripts/reset.ts"
+  },
+  "author": "Khanh Vuong Tuan",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.296",
+    "better-sqlite3": "^13.0.3",
+    "lucide-react": "^1.55.0",
+    "next": "^16.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "playwright": "^1.64.0",
+    "postcss": "^8.5.29",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.3"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  }
+}
