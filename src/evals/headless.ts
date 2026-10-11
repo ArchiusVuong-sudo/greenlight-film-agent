@@ -1,4 +1,4 @@
-import { mkdtempSync } from "node:fs";
+import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { LiveProvider } from "../agent/live";
@@ -16,6 +16,8 @@ export interface HeadlessResult {
   filmId: string;
   runId: string;
   durationMs: number;
+  /** Closes the database and removes its temp folder. */
+  dispose: () => void;
 }
 
 /**
@@ -26,7 +28,8 @@ export async function runBrief(
   brief: Brief,
   opts: { provider: "live" | "replay"; fixture?: Fixture | null; director: AutoDirector; recordTo?: string; model?: string; latencyScale?: number; dbPath?: string; pollMs?: number },
 ): Promise<HeadlessResult> {
-  const db = openDb(opts.dbPath ?? join(mkdtempSync(join(tmpdir(), "greenlight-eval-")), "eval.db"));
+  const dir = opts.dbPath ? null : mkdtempSync(join(tmpdir(), "greenlight-eval-"));
+  const db = openDb(opts.dbPath ?? join(dir!, "eval.db"));
   const queue = new RenderQueue(db, { latencyScale: opts.latencyScale ?? 0.3 });
   queue.start(50);
   const film = createFilm(db, brief);
@@ -44,5 +47,9 @@ export async function runBrief(
   } finally {
     queue.stop();
   }
-  return { db, filmId: film.id, runId: run.id, durationMs: Date.now() - t0 };
+  const dispose = () => {
+    if (db.open) db.close();
+    if (dir) rmSync(dir, { recursive: true, force: true });
+  };
+  return { db, filmId: film.id, runId: run.id, durationMs: Date.now() - t0, dispose };
 }

@@ -29,7 +29,7 @@ async function evalOne(brief: Brief, mode: "live" | "replay"): Promise<BriefScor
   });
   const s = scoreRun(res.db, res.filmId, res.runId, brief, res.durationMs);
   console.log(`${brief.briefId.padEnd(14)} ${s.passed}/${s.total}  ${s.creditsSpent}/${s.budget} cr  ${Math.round(s.durationMs / 1000)} s  ${s.trace.filter((t) => !t.pass).map((t) => t.id).join(", ")}`);
-  res.db.close();
+  res.dispose();
   return s;
 }
 

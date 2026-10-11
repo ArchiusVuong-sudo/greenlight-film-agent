@@ -21,6 +21,7 @@ async function main() {
   const run = getRun(res.db, res.runId)!;
   console.log(`\nrun ${run.status} in ${Math.round(res.durationMs / 1000)} s, ${run.turns} turns, cards: ${listDecisions(res.db, res.filmId).map((d) => `${d.id}:${d.kind}:${d.status}`).join(" ")}, cut: ${getCut(res.db, res.filmId) ? "yes" : "no"}`);
   console.log(`fixture written to ${out}`);
+  res.dispose();
   if (run.status !== "done") process.exitCode = 1;
 }
 
