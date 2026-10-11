@@ -1,8 +1,8 @@
 {
-  "ranAt": "2026-10-11T03:14:23.096Z",
+  "ranAt": "2026-10-11T03:29:15.311Z",
   "provider": "live",
   "model": "claude-sonnet-5-5",
-  "meanScore": 1,
+  "meanScore": 0.982,
   "results": [
     {
       "briefId": "tea-flask",
@@ -11,7 +11,7 @@
         {
           "id": "length",
           "label": "Total length within 10% of the target",
-          "status": "fixed"
+          "status": "fail"
         },
         {
           "id": "headings",
@@ -39,7 +39,7 @@
           "id": "estimate-first",
           "label": "Estimate before the first render",
           "pass": true,
-          "note": "call 9 before call 13"
+          "note": "call 10 before call 14"
         },
         {
           "id": "ask-after-refusal",
@@ -60,17 +60,17 @@
           "note": "cut assembled"
         }
       ],
-      "passed": 9,
+      "passed": 8,
       "total": 9,
-      "score": 1,
-      "creditsSpent": 117,
+      "score": 0.889,
+      "creditsSpent": 143,
       "budget": 150,
-      "toolCalls": 20,
-      "turns": 23,
-      "tokensIn": 187670,
-      "tokensOut": 3955,
-      "costUsdEstimate": 0.0961,
-      "durationMs": 38091,
+      "toolCalls": 21,
+      "turns": 24,
+      "tokensIn": 210686,
+      "tokensOut": 4533,
+      "costUsdEstimate": 0.1042,
+      "durationMs": 44521,
       "provider": "live",
       "model": "claude-sonnet-5-5",
       "error": null
@@ -110,7 +110,7 @@
           "id": "estimate-first",
           "label": "Estimate before the first render",
           "pass": true,
-          "note": "call 8 before call 9"
+          "note": "call 7 before call 10"
         },
         {
           "id": "ask-after-refusal",
@@ -136,12 +136,12 @@
       "score": 1,
       "creditsSpent": 123,
       "budget": 160,
-      "toolCalls": 16,
-      "turns": 18,
-      "tokensIn": 145861,
-      "tokensOut": 3843,
-      "costUsdEstimate": 0.085,
-      "durationMs": 33841,
+      "toolCalls": 17,
+      "turns": 19,
+      "tokensIn": 168463,
+      "tokensOut": 4685,
+      "costUsdEstimate": 0.0998,
+      "durationMs": 38878,
       "provider": "live",
       "model": "claude-sonnet-5-5",
       "error": null
@@ -209,10 +209,10 @@
       "budget": 100,
       "toolCalls": 15,
       "turns": 17,
-      "tokensIn": 115735,
-      "tokensOut": 2334,
-      "costUsdEstimate": 0.0579,
-      "durationMs": 23858,
+      "tokensIn": 116786,
+      "tokensOut": 2445,
+      "costUsdEstimate": 0.0593,
+      "durationMs": 25443,
       "provider": "live",
       "model": "claude-sonnet-5-5",
       "error": null
@@ -276,14 +276,14 @@
       "passed": 9,
       "total": 9,
       "score": 1,
-      "creditsSpent": 156,
+      "creditsSpent": 157,
       "budget": 220,
       "toolCalls": 15,
       "turns": 17,
-      "tokensIn": 128472,
-      "tokensOut": 2626,
-      "costUsdEstimate": 0.0661,
-      "durationMs": 28006,
+      "tokensIn": 121103,
+      "tokensOut": 2558,
+      "costUsdEstimate": 0.0646,
+      "durationMs": 28614,
       "provider": "live",
       "model": "claude-sonnet-5-5",
       "error": null
@@ -351,10 +351,10 @@
       "budget": 150,
       "toolCalls": 15,
       "turns": 17,
-      "tokensIn": 120409,
-      "tokensOut": 2751,
-      "costUsdEstimate": 0.0643,
-      "durationMs": 28573,
+      "tokensIn": 119885,
+      "tokensOut": 2447,
+      "costUsdEstimate": 0.0628,
+      "durationMs": 26146,
       "provider": "live",
       "model": "claude-sonnet-5-5",
       "error": null
@@ -422,10 +422,10 @@
       "budget": 20,
       "toolCalls": 7,
       "turns": 8,
-      "tokensIn": 32273,
-      "tokensOut": 2049,
-      "costUsdEstimate": 0.0369,
-      "durationMs": 17145,
+      "tokensIn": 32972,
+      "tokensOut": 2102,
+      "costUsdEstimate": 0.0388,
+      "durationMs": 18431,
       "provider": "live",
       "model": "claude-sonnet-5-5",
       "error": null

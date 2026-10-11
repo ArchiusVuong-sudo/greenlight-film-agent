@@ -129,13 +129,13 @@ function SceneCard({ state, n }: { state: FilmState; n: number }) {
   const img = assetUrl(clip?.status === "done" ? clip.assetId : frame?.status === "done" ? frame.assetId : null);
   return (
     <div className="hover-play fade-up overflow-hidden rounded-xl border border-ink-700 bg-ink-900">
-      <div className={cx("relative overflow-hidden bg-ink-850", aspectClass(state.film.aspect))}>
+      <div className={cx("relative overflow-hidden bg-ink-850", state.film.aspect === "9:16" ? "aspect-[3/4]" : aspectClass(state.film.aspect))}>
         {img ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={img}
             alt={`Scene ${n}`}
-            className={cx("size-full object-cover", clip?.status === "done" && `clip-move move-${scene.cameraMove}`)}
+            className={cx("size-full object-cover object-[50%_70%]", clip?.status === "done" && `clip-move move-${scene.cameraMove}`)}
             style={{ animationDuration: "0s" }}
           />
         ) : (

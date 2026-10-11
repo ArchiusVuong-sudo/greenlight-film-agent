@@ -1,6 +1,6 @@
 {
  "briefId": "tea-flask",
- "recordedAt": "2026-10-11T03:16:42.243Z",
+ "recordedAt": "2026-10-11T03:29:15.782Z",
  "model": "claude-sonnet-5-5",
  "segments": [
   {
@@ -12,29 +12,29 @@
       {
        "name": "setProject",
        "input": {
-        "title": "First Pour",
-        "logline": "A night-shift baker bikes through the rainy pre-dawn city and pours hot tea from her steel flask on a stone bridge as the sun rises.",
+        "title": "First Light",
+        "logline": "A night-shift baker bikes through the rainy dark and pours a warm cup of tea on a stone bridge as the sun rises.",
         "look": {
          "palette": [
           "#0b1d3a",
-          "#1f4e8c",
-          "#f2a33a",
-          "#c62828",
-          "#d9d4c7"
+          "#1f3b6e",
+          "#e8962e",
+          "#f4c77a",
+          "#b3202a"
          ],
-         "style": "Cinematic, shallow depth of field, wet reflective streets, warm practical lights against cool blue night",
-         "mood": "Quiet, cozy, hopeful; warm amber breaking through blue night"
+         "style": "Cinematic vertical spec ad, shallow depth of field, rain streaks, warm practical lights",
+         "mood": "Quiet, cozy, hopeful: warm amber against blue night"
         }
        }
       }
      ],
      "usage": {
       "input": 2,
-      "output": 26,
-      "cacheRead": 5172,
-      "cacheWrite": 780
+      "output": 28,
+      "cacheRead": 5594,
+      "cacheWrite": 369
      },
-     "durationMs": 4235
+     "durationMs": 3616
     },
     {
      "text": "",
@@ -47,31 +47,31 @@
           "id": "mara",
           "kind": "cast",
           "name": "Mara",
-          "description": "Woman in her 30s, night-shift baker, bright red hooded raincoat, flour-dusted dark trousers, dark hair tucked under hood, tired warm eyes"
+          "description": "Woman in her 30s, night-shift baker, bright red raincoat with hood, flour-dusted dark trousers, tired kind face, dark hair tucked under hood"
          },
          {
           "id": "city-street",
           "kind": "location",
-          "name": "Rainy City Street",
-          "description": "Narrow wet city street before dawn, blue night tones, amber shop windows and streetlamps reflecting on rain-slick asphalt"
+          "name": "Rainy city street",
+          "description": "Wet empty city street before dawn, blue night, glowing amber shop windows and streetlamps reflecting on asphalt"
          },
          {
           "id": "stone-bridge",
           "kind": "location",
-          "name": "Stone Bridge",
-          "description": "Old arched stone bridge over a river at sunrise, wet grey stones, amber sun on the horizon, thin mist"
+          "name": "Stone bridge",
+          "description": "Old arched stone bridge over a river, mossy grey stone parapet, sunrise glowing amber on the horizon, light drizzle"
          },
          {
           "id": "flask",
           "kind": "prop",
-          "name": "Steel Tea Flask",
-          "description": "Unbranded brushed stainless steel tea flask with a cup-lid, no logos, small beads of rain, steam rising when opened"
+          "name": "Steel tea flask",
+          "description": "Unbranded brushed stainless steel tea flask with a cup-lid, small dents, warm amber reflections, steam rising when opened"
          },
          {
           "id": "bike",
           "kind": "prop",
           "name": "Bicycle",
-          "description": "Dark green city bicycle with a front basket and a small front lamp casting warm light"
+          "description": "Old dark green city bicycle with front basket and a small amber front lamp"
          }
         ]
        }
@@ -79,11 +79,11 @@
      ],
      "usage": {
       "input": 2,
-      "output": 26,
-      "cacheRead": 5172,
-      "cacheWrite": 780
+      "output": 28,
+      "cacheRead": 5594,
+      "cacheWrite": 369
      },
-     "durationMs": 2660
+     "durationMs": 2462
     },
     {
      "text": "",
@@ -95,19 +95,21 @@
          {
           "n": 1,
           "heading": "INT. BAKERY - NIGHT",
-          "action": "Mara in her red raincoat pulls the door shut, flour on her sleeves, and tucks the steel flask into the bike basket. Warm amber light spills behind her onto the wet pavement.",
+          "action": "Mara in her red raincoat pulls the bakery door shut, flour on her sleeves, and slides a steel flask into her bike basket. Amber light spills from the window onto wet pavement.",
           "durationSec": 4,
           "elementIds": [
            "mara",
            "flask",
-           "bike"
+           "bike",
+           "city-street"
           ],
           "cameraMove": "push-in"
          },
          {
+          "id": "x",
           "n": 2,
-          "heading": "EXT. RAINY CITY STREET - NIGHT",
-          "action": "Mara cycles down the rainy street, red coat bright against blue shadows, lamp glow streaking on the wet asphalt.",
+          "heading": "EXT. CITY STREET - BEFORE DAWN",
+          "action": "Mara pedals through the rain past glowing amber windows. Rain streaks through the bike lamp beam, puddles splash under the wheels.",
           "durationSec": 6,
           "elementIds": [
            "mara",
@@ -119,7 +121,7 @@
          {
           "n": 3,
           "heading": "EXT. STONE BRIDGE - SUNRISE",
-          "action": "Mara stops her bike on the stone bridge. Amber sun rises over the river. She unscrews the flask and pours tea into the cup, steam curling in the light.",
+          "action": "Mara leans her bike on the parapet and unscrews the flask. Steam curls up as she pours tea into the cup while sunrise lights the river.",
           "durationSec": 6,
           "elementIds": [
            "mara",
@@ -132,11 +134,11 @@
          {
           "n": 4,
           "heading": "EXT. STONE BRIDGE - SUNRISE",
-          "action": "Close on the steel flask in her hands, steam rising, sunrise glow on the brushed steel. Mara lifts the cup.",
+          "action": "Close on the steel flask on the stone parapet, steam rising, amber sun glinting on the metal while Mara's red sleeve lifts the cup.",
           "dialogue": [
            {
             "speaker": "mara",
-            "line": "Every morning deserves a warm start.",
+            "line": "Warm, wherever the night takes you.",
             "vo": true
            }
           ],
@@ -154,11 +156,11 @@
      ],
      "usage": {
       "input": 2,
-      "output": 26,
-      "cacheRead": 5172,
-      "cacheWrite": 780
+      "output": 28,
+      "cacheRead": 5594,
+      "cacheWrite": 369
      },
-     "durationMs": 3570
+     "durationMs": 3904
     },
     {
      "text": "",
@@ -173,11 +175,11 @@
      ],
      "usage": {
       "input": 2,
-      "output": 26,
-      "cacheRead": 5172,
-      "cacheWrite": 780
+      "output": 8,
+      "cacheRead": 5963,
+      "cacheWrite": 1938
      },
-     "durationMs": 364
+     "durationMs": 1878
     },
     {
      "text": "",
@@ -192,11 +194,11 @@
      ],
      "usage": {
       "input": 2,
-      "output": 26,
-      "cacheRead": 5172,
-      "cacheWrite": 780
+      "output": 8,
+      "cacheRead": 5963,
+      "cacheWrite": 1938
      },
-     "durationMs": 333
+     "durationMs": 194
     },
     {
      "text": "",
@@ -204,18 +206,37 @@
       {
        "name": "searchLibrary",
        "input": {
-        "query": "steel flask",
+        "query": "steel tea flask",
         "kind": "prop"
        }
       }
      ],
      "usage": {
       "input": 2,
-      "output": 26,
-      "cacheRead": 5172,
-      "cacheWrite": 780
+      "output": 8,
+      "cacheRead": 5963,
+      "cacheWrite": 1938
      },
-     "durationMs": 290
+     "durationMs": 331
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "searchLibrary",
+       "input": {
+        "query": "bicycle",
+        "kind": "prop"
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 8,
+      "cacheRead": 5963,
+      "cacheWrite": 1938
+     },
+     "durationMs": 233
     },
     {
      "text": "",
@@ -230,11 +251,11 @@
      ],
      "usage": {
       "input": 2,
-      "output": 8,
-      "cacheRead": 5952,
-      "cacheWrite": 2625
+      "output": 31,
+      "cacheRead": 7901,
+      "cacheWrite": 895
      },
-     "durationMs": 3212
+     "durationMs": 1403
     },
     {
      "text": "",
@@ -249,11 +270,11 @@
      ],
      "usage": {
       "input": 2,
-      "output": 8,
-      "cacheRead": 5952,
-      "cacheWrite": 2625
+      "output": 31,
+      "cacheRead": 7901,
+      "cacheWrite": 895
      },
-     "durationMs": 271
+     "durationMs": 257
     },
     {
      "text": "",
@@ -286,84 +307,11 @@
      ],
      "usage": {
       "input": 2,
-      "output": 24,
-      "cacheRead": 8577,
-      "cacheWrite": 449
+      "output": 26,
+      "cacheRead": 8796,
+      "cacheWrite": 369
      },
-     "durationMs": 1871
-    },
-    {
-     "text": "",
-     "toolCalls": [
-      {
-       "name": "estimateCost",
-       "input": {
-        "imageModel": "sim-image-pro",
-        "videoModel": "sim-video-pro",
-        "resolution": "720p",
-        "references": [
-         "mara",
-         "flask",
-         "bike"
-        ],
-        "frames": [
-         1,
-         2,
-         3,
-         4
-        ],
-        "clips": [
-         1,
-         2,
-         3,
-         4
-        ]
-       }
-      }
-     ],
-     "usage": {
-      "input": 2,
-      "output": 5,
-      "cacheRead": 9026,
-      "cacheWrite": 872
-     },
-     "durationMs": 3089
-    },
-    {
-     "text": "",
-     "toolCalls": [
-      {
-       "name": "estimateCost",
-       "input": {
-        "imageModel": "sim-image-pro",
-        "videoModel": "sim-video-pro",
-        "resolution": "1080p",
-        "references": [
-         "mara",
-         "flask",
-         "bike"
-        ],
-        "frames": [
-         1,
-         2,
-         3,
-         4
-        ],
-        "clips": [
-         2,
-         3,
-         4
-        ]
-       }
-      }
-     ],
-     "usage": {
-      "input": 2,
-      "output": 5,
-      "cacheRead": 9026,
-      "cacheWrite": 872
-     },
-     "durationMs": 788
+     "durationMs": 1781
     },
     {
      "text": "",
@@ -372,25 +320,25 @@
        "name": "askDirector",
        "input": {
         "kind": "budget",
-        "message": "The full plan at 1080p with sim-video-pro costs 177 credits, and your budget is 150. How do you want to bring it down?",
+        "message": "The full plan at 1080p with sim-video-pro costs 177 credits, over your 150 budget. How would you like to proceed?",
         "options": [
          {
-          "id": "clips-720p",
-          "label": "All clips at 720p (pro)",
-          "detail": "Keeps all 4 scenes and 20 s. Lower resolution than requested.",
+          "id": "pro-720p",
+          "label": "Keep sim-video-pro, render clips at 720p",
+          "detail": "Smooth camera moves, full 20 s, lower resolution.",
           "estimateCredits": 117
          },
          {
-          "id": "drop-scene-1",
-          "label": "Keep 1080p, drop scene 1 (4 s)",
-          "detail": "Film becomes 16 s, opening on the bike ride. Stays at 1080p.",
-          "estimateCredits": 148
+          "id": "lite-720p",
+          "label": "Use sim-video-lite at 720p",
+          "detail": "Simpler motion, full 20 s, cheapest option.",
+          "estimateCredits": 87
          },
          {
-          "id": "lite-720p",
-          "label": "Lite video model at 720p",
-          "detail": "Cheapest. Simple motion only, 720p, keeps 20 s.",
-          "estimateCredits": 96
+          "id": "short-1080p",
+          "label": "Keep 1080p pro, cut the film to about 14 s",
+          "detail": "Shorten scenes 2 and 3 to 3 s each, 1080p kept, shorter than the 20 s target.",
+          "estimateCredits": 135
          }
         ]
        }
@@ -399,39 +347,39 @@
      "usage": {
       "input": 2,
       "output": 4,
-      "cacheRead": 9898,
-      "cacheWrite": 1815
+      "cacheRead": 9165,
+      "cacheWrite": 870
      },
-     "durationMs": 3465
+     "durationMs": 5719
     },
     {
-     "text": "I'm waiting on your budget decision. The full plan at 1080p costs 177 credits and your budget is 150. The card has three options:\n\n- **720p clips:** about 117 credits, all 20 s.\n- **1080p, drop scene 1:** about 148 credits, 16 s.\n- **Lite model at 720p:** about 96 credits, all 20 s.\n\nOnce you pick one, I'll start rendering.",
+     "text": "I'm waiting on your call about the budget. The full plan at 1080p costs 177 credits and you set 150. I've put three options on the card, and I'll continue once you pick one.",
      "toolCalls": [],
      "usage": {
       "input": 2,
-      "output": 136,
-      "cacheRead": 11713,
-      "cacheWrite": 495
+      "output": 59,
+      "cacheRead": 10035,
+      "cacheWrite": 717
      },
-     "durationMs": 1924
+     "durationMs": 1346
     }
    ],
    "result": {
-    "durationMs": 24992,
+    "durationMs": 22423,
     "totalUsage": {
      "input": 1343,
-     "output": 3063,
-     "cacheRead": 50338,
-     "cacheWrite": 7036
+     "output": 2724,
+     "cacheRead": 47454,
+     "cacheWrite": 5158
     },
-    "costUsd": 0.0637749,
-    "turns": 13,
+    "costUsd": 0.05258449999999999,
+    "turns": 12,
     "isError": false,
     "errors": []
    }
   },
   {
-   "input": "Director picked \"All clips at 720p (pro)\" (option clips-720p) on budget card D1. Carry on with that choice.",
+   "input": "Director picked \"Keep sim-video-pro, render clips at 720p\" (option pro-720p) on budget card D1. Carry on with that choice.",
    "turns": [
     {
      "text": "",
@@ -451,10 +399,10 @@
      "usage": {
       "input": 2,
       "output": 24,
-      "cacheRead": 12208,
-      "cacheWrite": 204
+      "cacheRead": 10752,
+      "cacheWrite": 134
      },
-     "durationMs": 2030
+     "durationMs": 1574
     },
     {
      "text": "",
@@ -473,10 +421,10 @@
      "usage": {
       "input": 2,
       "output": 32,
-      "cacheRead": 12412,
+      "cacheRead": 10886,
       "cacheWrite": 331
      },
-     "durationMs": 2344
+     "durationMs": 1332
     },
     {
      "text": "",
@@ -497,32 +445,32 @@
      "usage": {
       "input": 2,
       "output": 24,
-      "cacheRead": 12743,
+      "cacheRead": 11217,
       "cacheWrite": 283
      },
-     "durationMs": 1798
+     "durationMs": 1573
     },
     {
-     "text": "The references for Mara, the flask and the bike are rendered, and I've asked you to review them. The street and bridge reuse library looks. I'll render frames and clips once you approve.",
+     "text": "The looks for Mara, the flask and the bike are rendered and waiting on your approval. The street and bridge reuse library looks. I'll start on frames and clips once you approve them.",
      "toolCalls": [],
      "usage": {
       "input": 2,
-      "output": 58,
-      "cacheRead": 13026,
+      "output": 59,
+      "cacheRead": 11500,
       "cacheWrite": 221
      },
-     "durationMs": 1679
+     "durationMs": 1322
     }
    ],
    "result": {
-    "durationMs": 7853,
+    "durationMs": 6003,
     "totalUsage": {
      "input": 1351,
-     "output": 3437,
-     "cacheRead": 100727,
-     "cacheWrite": 8075
+     "output": 3099,
+     "cacheRead": 91809,
+     "cacheWrite": 6127
     },
-    "costUsd": 0.0767258,
+    "costUsd": 0.064662,
     "turns": 4,
     "isError": false,
     "errors": []
@@ -542,7 +490,7 @@
           "id": "mara",
           "kind": "cast",
           "name": "Mara",
-          "description": "Woman in her 30s, night-shift baker, bright yellow hooded raincoat, flour-dusted dark trousers, dark hair tucked under hood, tired warm eyes"
+          "description": "Woman in her 30s, night-shift baker, bright yellow raincoat with hood, flour-dusted dark trousers, tired kind face, dark hair tucked under hood"
          }
         ]
        }
@@ -551,85 +499,10 @@
      "usage": {
       "input": 2,
       "output": 3,
-      "cacheRead": 13247,
-      "cacheWrite": 169
+      "cacheRead": 11721,
+      "cacheWrite": 170
      },
-     "durationMs": 2988
-    },
-    {
-     "text": "",
-     "toolCalls": [
-      {
-       "name": "writeScenes",
-       "input": {
-        "scenes": [
-         {
-          "n": 1,
-          "heading": "INT. BAKERY - NIGHT",
-          "action": "Mara in her yellow raincoat pulls the door shut, flour on her sleeves, and tucks the steel flask into the bike basket. Warm amber light spills behind her onto the wet pavement.",
-          "durationSec": 4,
-          "elementIds": [
-           "mara",
-           "flask",
-           "bike"
-          ],
-          "cameraMove": "push-in"
-         },
-         {
-          "n": 2,
-          "heading": "EXT. RAINY CITY STREET - NIGHT",
-          "action": "Mara cycles down the rainy street, yellow coat bright against blue shadows, lamp glow streaking on the wet asphalt.",
-          "durationSec": 6,
-          "elementIds": [
-           "mara",
-           "bike",
-           "city-street"
-          ],
-          "cameraMove": "pan-right"
-         },
-         {
-          "n": 3,
-          "heading": "EXT. STONE BRIDGE - SUNRISE",
-          "action": "Mara stops her bike on the stone bridge. Amber sun rises over the river. She unscrews the flask and pours tea into the cup, steam curling in the light.",
-          "durationSec": 6,
-          "elementIds": [
-           "mara",
-           "bike",
-           "flask",
-           "stone-bridge"
-          ],
-          "cameraMove": "static"
-         },
-         {
-          "n": 4,
-          "heading": "EXT. STONE BRIDGE - SUNRISE",
-          "action": "Close on the steel flask in her hands, steam rising, sunrise glow on the brushed steel. Mara lifts the cup.",
-          "dialogue": [
-           {
-            "speaker": "mara",
-            "line": "Every morning deserves a warm start.",
-            "vo": true
-           }
-          ],
-          "durationSec": 4,
-          "elementIds": [
-           "mara",
-           "flask",
-           "stone-bridge"
-          ],
-          "cameraMove": "pull-out"
-         }
-        ]
-       }
-      }
-     ],
-     "usage": {
-      "input": 2,
-      "output": 3,
-      "cacheRead": 13247,
-      "cacheWrite": 169
-     },
-     "durationMs": 2527
+     "durationMs": 2622
     },
     {
      "text": "",
@@ -647,10 +520,86 @@
      "usage": {
       "input": 2,
       "output": 24,
-      "cacheRead": 13416,
-      "cacheWrite": 1458
+      "cacheRead": 11891,
+      "cacheWrite": 517
      },
-     "durationMs": 1527
+     "durationMs": 1378
+    },
+    {
+     "text": "",
+     "toolCalls": [
+      {
+       "name": "writeScenes",
+       "input": {
+        "scenes": [
+         {
+          "n": 1,
+          "heading": "INT. BAKERY - NIGHT",
+          "action": "Mara in her yellow raincoat pulls the bakery door shut, flour on her sleeves, and slides a steel flask into her bike basket. Amber light spills from the window onto wet pavement.",
+          "durationSec": 4,
+          "elementIds": [
+           "mara",
+           "flask",
+           "bike",
+           "city-street"
+          ],
+          "cameraMove": "push-in"
+         },
+         {
+          "n": 2,
+          "heading": "EXT. CITY STREET - BEFORE DAWN",
+          "action": "Mara pedals through the rain past glowing amber windows. Rain streaks through the bike lamp beam, puddles splash under the wheels.",
+          "durationSec": 6,
+          "elementIds": [
+           "mara",
+           "bike",
+           "city-street"
+          ],
+          "cameraMove": "pan-right"
+         },
+         {
+          "n": 3,
+          "heading": "EXT. STONE BRIDGE - SUNRISE",
+          "action": "Mara leans her bike on the parapet and unscrews the flask. Steam curls up as she pours tea into the cup while sunrise lights the river.",
+          "durationSec": 6,
+          "elementIds": [
+           "mara",
+           "bike",
+           "flask",
+           "stone-bridge"
+          ],
+          "cameraMove": "static"
+         },
+         {
+          "n": 4,
+          "heading": "EXT. STONE BRIDGE - SUNRISE",
+          "action": "Close on the steel flask on the stone parapet, steam rising, amber sun glinting on the metal while Mara's yellow sleeve lifts the cup.",
+          "dialogue": [
+           {
+            "speaker": "mara",
+            "line": "Warm, wherever the night takes you.",
+            "vo": true
+           }
+          ],
+          "durationSec": 4,
+          "elementIds": [
+           "mara",
+           "flask",
+           "stone-bridge"
+          ],
+          "cameraMove": "pull-out"
+         }
+        ]
+       }
+      }
+     ],
+     "usage": {
+      "input": 2,
+      "output": 24,
+      "cacheRead": 11891,
+      "cacheWrite": 517
+     },
+     "durationMs": 2602
     },
     {
      "text": "",
@@ -666,11 +615,11 @@
      ],
      "usage": {
       "input": 2,
-      "output": 32,
-      "cacheRead": 14874,
-      "cacheWrite": 245
+      "output": 27,
+      "cacheRead": 12408,
+      "cacheWrite": 1178
      },
-     "durationMs": 1405
+     "durationMs": 1083
     },
     {
      "text": "",
@@ -679,7 +628,7 @@
        "name": "askDirector",
        "input": {
         "kind": "look",
-        "message": "Mara's new look is ready with the yellow raincoat. I also changed \"red\" to \"yellow\" in the scene text. Please review.",
+        "message": "Mara's new look has a yellow raincoat. I also changed the scene text from red to yellow. Please review.",
         "elementIds": [
          "mara"
         ]
@@ -689,32 +638,32 @@
      "usage": {
       "input": 2,
       "output": 24,
-      "cacheRead": 15119,
+      "cacheRead": 13586,
       "cacheWrite": 183
      },
-     "durationMs": 1817
+     "durationMs": 1534
     },
     {
-     "text": "Mara's reference is re-rendered with the yellow raincoat, and I've asked you to approve it. I also changed \"red\" to \"yellow\" in the scene text. The flask and bike stay approved. I'll render frames and clips once Mara is approved.",
+     "text": "Mara's second look is rendered with the yellow raincoat, and it's waiting on your approval. I also changed \"red\" to \"yellow\" in the scene text. The flask and bike stay approved.",
      "toolCalls": [],
      "usage": {
       "input": 2,
-      "output": 82,
-      "cacheRead": 15302,
-      "cacheWrite": 219
+      "output": 63,
+      "cacheRead": 13769,
+      "cacheWrite": 212
      },
-     "durationMs": 2165
+     "durationMs": 1236
     }
    ],
    "result": {
-    "durationMs": 12429,
+    "durationMs": 10459,
     "totalUsage": {
      "input": 1361,
-     "output": 4734,
-     "cacheRead": 172685,
-     "cacheWrite": 10349
+     "output": 4362,
+     "cacheRead": 155184,
+     "cacheWrite": 8387
     },
-    "costUsd": 0.10600760000000001,
+    "costUsd": 0.0926895,
     "turns": 6,
     "isError": false,
     "errors": []
@@ -742,10 +691,10 @@
      "usage": {
       "input": 2,
       "output": 24,
-      "cacheRead": 15521,
-      "cacheWrite": 139
+      "cacheRead": 13981,
+      "cacheWrite": 120
      },
-     "durationMs": 1828
+     "durationMs": 1646
     },
     {
      "text": "",
@@ -765,10 +714,10 @@
      "usage": {
       "input": 2,
       "output": 32,
-      "cacheRead": 15660,
-      "cacheWrite": 458
+      "cacheRead": 14101,
+      "cacheWrite": 464
      },
-     "durationMs": 1427
+     "durationMs": 1181
     },
     {
      "text": "",
@@ -790,10 +739,10 @@
      "usage": {
       "input": 2,
       "output": 24,
-      "cacheRead": 16118,
+      "cacheRead": 14565,
       "cacheWrite": 300
      },
-     "durationMs": 1625
+     "durationMs": 1346
     },
     {
      "text": "",
@@ -813,10 +762,10 @@
      "usage": {
       "input": 2,
       "output": 32,
-      "cacheRead": 16418,
+      "cacheRead": 14865,
       "cacheWrite": 431
      },
-     "durationMs": 1458
+     "durationMs": 1183
     },
     {
      "text": "",
@@ -829,32 +778,32 @@
      "usage": {
       "input": 2,
       "output": 24,
-      "cacheRead": 16849,
+      "cacheRead": 15296,
       "cacheWrite": 317
      },
-     "durationMs": 1230
+     "durationMs": 986
     },
     {
-     "text": "The 20-second cut of \"First Pour\" is assembled, and all export checks passed. It has four scenes, with Mara in the yellow raincoat and the clips at 720p as you chose. Scene 1's clip needed one retry after a simulated timeout. I'd spent 121 of the 150 credits when the clips were queued, and I didn't re-check the total after they finished.",
+     "text": "The 20-second cut of \"First Light\" is assembled, and all export checks passed. Clips are 720p, not 1080p, as you chose on the budget card. The cut uses the yellow-raincoat Mara and costs 121 of your 150 credits.",
      "toolCalls": [],
      "usage": {
       "input": 2,
-      "output": 122,
-      "cacheRead": 17166,
+      "output": 83,
+      "cacheRead": 15613,
       "cacheWrite": 357
      },
-     "durationMs": 2189
+     "durationMs": 1514
     }
    ],
    "result": {
-    "durationMs": 10269,
+    "durationMs": 8668,
     "totalUsage": {
      "input": 1373,
-     "output": 5252,
-     "cacheRead": 270417,
-     "cacheWrite": 12351
+     "output": 4841,
+     "cacheRead": 243605,
+     "cacheWrite": 10376
     },
-    "costUsd": 0.12899280000000002,
+    "costUsd": 0.11430160000000002,
     "turns": 6,
     "isError": false,
     "errors": []
