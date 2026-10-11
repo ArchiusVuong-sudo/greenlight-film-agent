@@ -7,7 +7,7 @@ export type Mode = "live" | "replay";
 
 /**
  * Live when the SDK can authenticate: ANTHROPIC_API_KEY, or a local Claude Code login
- * (macOS keychain item or ~/.claude/.credentials.json). DEMO_REPLAY=1 forces replay.
+ * (the macOS keychain item or the credentials file in the home folder). DEMO_REPLAY=1 forces replay.
  * Only the presence of a login is checked; no secret is read.
  */
 export function detectMode(env: Record<string, string | undefined> = process.env): { mode: Mode; reason: string } {
